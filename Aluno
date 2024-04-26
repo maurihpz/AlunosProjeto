@@ -1,0 +1,45 @@
+package Executável;
+
+import java.util.Scanner;
+
+public class Aluno {
+    
+    public int matricula;
+    public String nome;
+    public String curso;
+    public int anoIngresso;
+
+    // Getters
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public int getanoIngresso() {
+        return anoIngresso;
+    }
+
+    // Setters
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public void setanoIngresso(int anoIngresso) {
+        this.anoIngresso = anoIngresso;
+    }
+}
