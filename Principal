@@ -1,0 +1,81 @@
+package Executável;
+
+import Executável.Aluno;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Principal {
+    public static void main(String[] args){
+    
+     Scanner sc = new Scanner(System.in);   
+        
+    Aluno aluno01 = new Aluno();
+    aluno01.matricula = 111;
+    aluno01.nome = "Joao";
+    aluno01.curso = "Sistemas de Informacao";
+    aluno01.anoIngresso = 2019;
+    
+    Aluno aluno02 = new Aluno();
+    aluno02.matricula = 112;
+    aluno02.nome = "Paula";
+    aluno02.curso = "Engenharia Civil";
+    aluno02.anoIngresso = 2021;
+    
+    
+    int opcao;
+           
+    do {
+        System.out.println("Escolha uma opcao");
+        System.out.println("[1] Ver informações dos alunos matriculados");
+        System.out.println("[2] Adicionar aluno");
+        System.out.println("[3] Encerrar programa");
+        
+        opcao = sc.nextInt();
+        
+        switch (opcao){
+            case 1:
+                System.out.println("Aluno 01");
+                System.out.println("Matricula : " + aluno01.matricula);
+                System.out.println("Nome : " + aluno01.nome);
+                System.out.println("Curso : " + aluno01.curso);
+                System.out.println("Ano de ingresso : " + aluno01.anoIngresso);
+                
+                System.out.println("\nAluno 02");
+                System.out.println("Matricula " + aluno02.matricula);
+                System.out.println("Nome : " + aluno02.nome);
+                System.out.println("Curso : " + aluno02.curso);
+                System.out.println("Ano de ingresso : " + aluno02.anoIngresso + "\n");
+                break;
+            case 2: 
+                Scanner input = new Scanner(System.in);
+                Aluno novoAluno = new Aluno();
+                System.out.println("Adicionar aluno");
+                System.out.println("\n Imprima matricula:");
+                novoAluno.setMatricula(input.nextInt());
+                input.nextLine(); // Limpar o buffer do scanner
+                    
+                System.out.println("Imprima Nome");
+                novoAluno.setNome(input.nextLine());
+
+                System.out.println("Imprima Curso");
+                novoAluno.setCurso(input.nextLine());
+
+                System.out.println("Imprima Ano de Ingresso: ");
+                novoAluno.setanoIngresso(input.nextInt());
+
+                System.out.println("Novo aluno adicionado com sucesso!");
+                break;
+            case 3:
+                System.out.println("Encerrando programa...");
+                break;
+            default: 
+                System.out.println("Opção inválida, por favor tente novamente");
+                break;
+        }
+        
+    } while (opcao != 3);
+    
+    sc.close();
+                
+    }
+}   
